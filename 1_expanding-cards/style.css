@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Mulish", sans-serif;
+  font-family: 'Mulish', sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -21,7 +21,7 @@ body {
 }
 
 .panel {
-  background-size: auto 100% / cover;
+  background-size: auto 100%;
   background-position: center;
   background: center;
   border-radius: 50px;
@@ -31,11 +31,12 @@ body {
   flex: 0.5;
   cursor: pointer;
   transition: flex ease-in 0.7s;
+  margin: 10px;
 }
 
 h3 {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   left: 20px;
   font-size: 24px;
   margin: 0;
@@ -47,6 +48,7 @@ h3 {
 
 .panel.active h3 {
   opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 
 @media (max-width: 480px) {
@@ -54,5 +56,8 @@ h3 {
     width: 100vw;
   }
 
-  .panel: nth-last-of-type(4);
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
 }
